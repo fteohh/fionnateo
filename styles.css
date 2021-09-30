@@ -1,0 +1,644 @@
+/* Global classes */
+
+html {
+    min-height: 100%;
+    margin: auto;
+    overflow: scroll;
+    scroll-behavior: smooth;
+
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+#screen {
+  position: relative;
+  padding-top: 30px;
+  padding-left: 220px;
+  width: 1010px;
+  color:#7E3601;
+}
+
+a href:focus {
+  margin: 10px;
+}
+
+/* The sidebar menu */
+.icon img{
+  position: relative;
+  left: 25px;
+  width: 150px;
+  height: 150px;
+
+}
+
+ nav.side-nav {
+  /* background-color: #ffff; */
+  background-color: #FB9F63;
+  height: 100%;
+  width: 215px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  padding-top: 25px;
+  overflow-x: hidden;
+}
+
+/* The navigation menu */
+
+.menu-portfolio #portfolio{
+  color: #EC4F00;
+}
+
+.menu-about #about{
+  color: #EC4F00;
+}
+
+.menu-contact #contact{
+  color: #EC4F00;
+}
+
+.side-nav li {
+  padding: 12px 10px 15px 18px;
+  text-decoration: none;
+  font-size: 23px;
+  color: #B34604;
+  display: block;
+  width: 100px;
+}
+
+a{
+  text-decoration: none;
+}
+
+nav.side-nav li:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Portfolio */
+
+#gingko{
+  position: relative;
+  top: 110px;
+  width: 160px;
+  height: 160px;
+  animation-name: move-gingko;
+  animation-duration: 3.2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes move-gingko {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mini-bio {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 25px;
+
+}
+
+.mini-bio-text {
+  font-size: 30px;
+  line-height: 43px;
+}
+
+#name{
+  position: relative;
+  top: 120px;
+  animation-name: move-bio-name;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+#description{
+  position: relative;
+  top:105px;
+  animation-name: move-bio-description;
+  animation-delay: .5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes move-bio-name {
+  from {
+    top: 150px;
+  }
+  to {
+    top: 120px;
+    opacity: 1;
+  }
+}
+
+@keyframes move-bio-description {
+  from {
+    top: 135px;
+  }
+  to {
+    top: 105px;
+    opacity: 1;
+  }
+}
+
+.view-work {
+  font-size: 40px;
+  position: relative;
+  top: 230px;
+  left:48px;
+  display: flex;
+  justify-content: center;
+  animation-name: arrow-fadein;
+  animation-duration: 1s;
+  animation-delay: 2.3s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes arrow-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* the bounce animation was sourced from Elvis Sedić at https://jsfiddle.net/esedic/rLdv29ou/ */
+
+@-webkit-keyframes bounce {
+    15% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    50% {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+    }
+    65% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    80% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes bounce {
+    15% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    50% {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+    }
+    65% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    80% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.view-work p:hover
+{
+    -webkit-animation: bounce 1s ease;
+    animation: bounce 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+a href{
+  display: block;
+}
+
+#section1{
+  height: 650px;
+}
+
+#section2{
+  height: 800px;
+  width: 1120px;
+}
+
+.project-container{
+  display: flex;
+  flex: 0 0 100%;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+
+.project{
+  position: relative;
+  margin: 25px;
+}
+
+#project1, #project2, #project3{
+  height: 350px;
+  width: 505px;
+  border-radius: 20px;
+}
+
+/*adapted from example at https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp */
+
+.project img{
+  flex: 1;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: .6;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.project:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Project 1: Music Player Concept */
+
+.image-reel1{
+  display:inline-block;
+  margin: 10px;
+
+}
+
+.image-reel1 img, iframe{
+  height: 500px;
+  width: 700px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+
+.description{
+  background-color: #ffff;
+  height: 100%;
+  width: 353px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 1000px;
+  padding-top: 25px;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+#text-body{
+  text-align: left;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* Project 2: Bookselves Wireframe Prototype */
+
+.image-reel2{
+  display:inline-block;
+  margin:10px;
+}
+
+#bookselves-intro-image{
+  position:relative;
+  height: 400px;
+  width: 600px;
+}
+
+.image-reel2 img{
+  height: 600px;
+  width: 600px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.bookselves-description{
+  background-color: #ffff;
+  height: 100%;
+  width: 495px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 905px;
+  padding-top: 18px;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.bookselves-description ol, .exChange-description ol{
+  text-align: left;
+}
+
+.bookselves-description a{
+  color: #EC4F00;
+}
+
+.bookselves-description a:hover{
+  text-decoration: underline;
+}
+
+/* Project 3: ExChange */
+
+.image-reel3{
+  height: 600px;
+  width: 600px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+#exChange-slides{
+  position:relative;
+  height: 500px;
+  width: 600px;
+}
+
+.google-slides {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 75%;
+}
+
+.google-slides iframe {
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.exChange-description{
+  background-color: #ffff;
+  height: 100%;
+  width: 479px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 908px;
+  padding-top: 18px;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+/* About*/
+
+.profile_pic img{
+  width: 450px;
+  height: 450px;
+  padding: 10px;
+  position: relative;
+  right: 30px;
+}
+
+.profile_pic {
+  animation-name: profile-pic;
+  animation-duration: 2.3s;
+  animation-fill-mode: forwards;
+  opacity: .5;
+}
+
+@keyframes profile-pic {
+  from {opacity: .5;}
+  to {opacity: 1;}
+}
+
+.bio{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 60px;
+  top: 70px;
+  color:#7E3601;
+}
+
+.bio-text{
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.resume-button{
+  display: block;
+  position: relative;
+  top: 100px;
+  left: 425px;
+}
+
+
+/* buttons based on an example from https://www.w3schools.com/css/css3_buttons.asp*/
+.resume, input[type=submit] {
+  position: relative;
+  background-color: #ffff;
+  border: 1px solid #EC4F00;
+  border-radius: 25px;
+  color: #EC4F00;
+  font-size: 17px;
+  padding: 13px;
+  width: 130px;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.resume:hover, input[type=submit]:hover {
+  transition-duration: .4s;
+  background-color: #FB9F63 ;
+  color: white;
+}
+
+.resume:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.resume:active:after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: .4s
+}
+
+.resume span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.resume span:after {
+  content: '\2023';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.resume:hover span {
+  padding-right: 25px;
+}
+
+.resume:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Contact*/
+
+#send-email {
+  color: #EC4F00;
+}
+
+#send-email:hover{
+text-decoration: underline;
+}
+
+.contact-intro{
+  text-align: center;
+  line-height: 25px;
+  font-size: 17px;
+  padding: 10px 0;
+}
+
+.contact-form{
+  position: relative;
+  left: 40px;
+  line-height: 30px;
+  font-size: 17px;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"], #message{
+  display: inline-block;
+  height: 40px;
+  width: 900px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  line-height: 25 px;
+  overflow: hidden;
+  resize: none;
+}
+
+.contact-form input[type="text"]:focus, .contact-form input[type="email"]:focus, #message:focus{
+  background-color: white;
+}
+
+.name-descriptors{
+  font-size: 14px;
+}
+
+.name-form textarea, .name-form input[type="text"]{
+  display: inline-block;
+  height: 40px;
+  width: 420px;
+  resize: none;
+}
+
+.name-form{
+  display: flex;
+  line-height: 25px;
+  width: 900px;
+  justify-content: space-between;
+}
+
+#email-address, #subject{
+  resize: none;
+}
+
+#message{
+  padding: 12px;
+  width: 900px;
+  height: 150px;
+  overflow: auto;
+  resize: vertical;
+}
+
+
+/* Thank You */
+
+.thankyou_message{
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+}
+
+#thanks_gif{
+  position: relative;
+  left: 170px;
+  width: 680px;
+  height: 370px;
+  border-radius: 300px;
+  animation-name: thanks_gif;
+  animation-duration: 4s;
+  animation-fill-mode: fowards;
+}
+
+
+@keyframes thanks_gif {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

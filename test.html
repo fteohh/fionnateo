@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Fionna Teoh</title>
+        <link rel="stylesheet" type="text/css" href="style-test.css"/>
+        <link rel="icon" type="image/png" href="images/favicon-196x196.png" sizes="196x196"/>
+    </head>
+
+    <body>
+        <!-- Side Menu Bar: navigation between portfolio, about, and contact pages-->
+        <nav class="side-nav">
+          <div class="icon">
+            <img src="images/icon-1.png" alt="FT logo">
+          </div>
+          <ul class= "menu-portfolio">
+            <a href="portfolio.html" aria-labelledby="Portfolio">Portfolio</a>
+            <a href="about.html" aria-labelledby="About">About</a>
+           <a href="contact.html" aria-labelledby="Contact">Contact</a>
+          </ul>
+        </nav>
+  
+
+        <div id="screen">
+            <!-- Section 1 of Landing Page/Portfolio page: introduction and toggle-->
+            <div id="section1">
+              <!-- Introduction: self-introduction-->
+                <div class="intro">
+                    <h1 id="name">Hi, I'm Fionna</h1>
+                    <p id="description">a designer passionate about storytelling and building meaningful experiences.</p>
+                </div>
+              <!-- Toggle to Projects in Portfolio: smooth scrolls to Section 2 of the page-->
+              <div class="view-work">
+                <a href="#section2">
+                  <p aria-labelledby="Smooth Scroll to Projects">&#8964;</p>
+                </a>
+              </div>
+            </div>
+    
+            <!-- Section 2 of Landing Page/Portfolio: 3 clickable projects -->
+            <div id="section2">
+              <div class="project-container">
+                <!-- Project 1: Music Player Concept-->
+                <div class="project">
+                  <a href="music_player.html">
+                    <img id="project1" src="images/project1.jpg" alt="Music Player Redesign">
+                    <div class="overlay" id="overlay1">
+                      <div class="text">
+                        <h3 aria-labelledby="Music Player Concept">Music Player Concept</h3>
+                        <p aria-labelledby="Student Project">Student Project<p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Project 2: Bookselves Wireframe Prototype-->
+                <div class="project">
+                  <a href="bookselves.html">
+                    <img id="project2" src="images/project2.gif" alt="Bookselves">
+                    <div class="overlay" id="overlay1">
+                      <div class="text">
+                        <h3 aria-labelledby="Bookselves Wireframe Prototype">Bookselves Wireframe Prototype</h3>
+                        <p aria-labelledby="Student Project">Student Project<p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Project 3: ExChange-->
+                <div class="project">
+                  <a href="exChange.html">
+                    <img id="project3" src="images/exChange.png" alt="ExChange">
+                    <div class="overlay" id="overlay1">
+                      <div class="text">
+                        <h3 aria-labelledby="ExChange">ExChange</h3>
+                        <p aria-labelledby="Improve NU 2020">Improve NU Challenge 2020<p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        
+      </body>
+</html>

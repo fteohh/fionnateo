@@ -1,0 +1,343 @@
+#screen {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* padding-top: 10px; */
+    padding: 50px;
+    color:#7E3601;
+}
+
+p {
+    word-break: break-all;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    background-color: #f3f3f3;
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto;
+    grid-template-areas: 
+        "top top"
+        "main main";
+}
+
+
+
+/* The sidebar menu */
+.icon img{
+    position: relative;
+    left: 30px;
+    top: 5px;
+    width: 60px;
+    height: 60px;
+  
+}
+  
+nav.side-nav {
+grid-area: top;
+background-color: #ffff;
+/* height: 100%;
+width: 215px; */
+width: 100%;
+height: 70px;
+position: fixed;
+z-index: 1;
+/* top: 0px;
+left: 0px;
+padding-top: 25px; */
+display: flex;
+justify-content: space-between;
+}
+
+/* The navigation menu */
+
+.menu-portfolio{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-portfolio #portfolio{
+    color: #EC4F00;
+  }
+  
+  .menu-about #about{
+    color: #EC4F00;
+  }
+  
+  .menu-contact #contact{
+    color: #EC4F00;
+  }
+  
+  .side-nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #B34604;
+    padding: 30px;
+    /* display: block; */
+  }
+  .side-nav a:hover{
+      color: #EC4F00;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  /* nav.side-nav li:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  } */
+  
+  /* Portfolio */
+  
+  #gingko{
+    position: relative;
+    top: 110px;
+    width: 160px;
+    height: 160px;
+    animation-name: move-gingko;
+    animation-duration: 3.2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  @keyframes move-gingko {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .mini-bio {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 25px;
+  
+  }
+  
+  .mini-bio-text {
+    position: relative;
+    text-align: left;
+    font-size: 30px;
+    line-height: 43px;
+  }
+
+.intro {
+    font-size: 25px;
+    
+  }
+
+
+  
+  /* #name{
+    position: relative;
+    top: 120px;
+    animation-name: move-bio-name;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  #description{
+    position: relative;
+    top:105px;
+    animation-name: move-bio-description;
+    animation-delay: .5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  } */
+  
+  /* @keyframes move-bio-name {
+    from {
+      top: 150px;
+    }
+    to {
+      top: 120px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes move-bio-description {
+    from {
+      top: 135px;
+    }
+    to {
+      top: 105px;
+      opacity: 1;
+    }
+  } */
+  
+  .view-work {
+    font-size: 40px;
+    position: relative;
+    top: 230px;
+    left:48px;
+    display: flex;
+    justify-content: center;
+    animation-name: arrow-fadein;
+    animation-duration: 1s;
+    animation-delay: 2.3s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+  }
+  
+  @keyframes arrow-fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* the bounce animation was sourced from Elvis Sedić at https://jsfiddle.net/esedic/rLdv29ou/ */
+  
+  @-webkit-keyframes bounce {
+      15% {
+          -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+      }
+      30% {
+          -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+      }
+      50% {
+          -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+      }
+      65% {
+          -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+      }
+      80% {
+          -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+      }
+      100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+      }
+  }
+  @keyframes bounce {
+      15% {
+          -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+      }
+      30% {
+          -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+      }
+      50% {
+          -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+      }
+      65% {
+          -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+      }
+      80% {
+          -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+      }
+      100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+      }
+  }
+  .view-work p:hover
+  {
+      -webkit-animation: bounce 1s ease;
+      animation: bounce 1s ease;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+  }
+  
+  a href{
+    display: block;
+  }
+  
+  #section1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 650px;
+  }
+  
+  #section2{
+    height: 800px;
+    width: 1120px;
+  }
+  
+  .project-container{
+    display: flex;
+    flex: 0 0 100%;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  
+  
+  .project{
+    position: relative;
+    margin: 25px;
+  }
+  
+  #project1, #project2, #project3{
+    height: 350px;
+    width: 505px;
+    border-radius: 20px;
+  }
+  
+  /*adapted from example at https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp */
+  
+  .project img{
+    flex: 1;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: .6;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+  
+  .project:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    /* position: absolute; */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
