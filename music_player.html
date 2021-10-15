@@ -29,37 +29,84 @@
           <div class="wrapper">
             <!-- section 1 -->
                 <!-- Image Reel: scrollable photos-->
-            <div class="music-player-container">
+            <div class="yuru-chara-map-container">
                 <!-- Image Reel: embedded YouTube video and scrollable photos-->
-                <div class="image-reel1">
+                <!-- <div class="image-reel1">
                     <iframe src="https://www.youtube.com/embed/LFrYVxHhqsA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" alt="Music Player Demo" allowfullscreen></iframe>
                     <img id="mp-image" src="images/music_player1.jpg" alt="Music Player: Home Screen">
                     <img id="mp-image" src="images/music_player2.jpg" alt="Music Player: Album Screen (ex. Currents by Tame Impala)">
                     <img id="mp-image" src="images/music_player3.jpg" alt="Music Player: Song Player">
-                </div>
+                </div> -->
 
                 <!-- Music Player Description: general overiview of project-->
-                <div class="music-player-description">
-                    <h3 id="subtitle">Music Player Concept<br>Student Project | Fall 2020</h3>
-                    <p id="text-body"><br>
-                    <p id="subtitle">Tools Used: HTML, CSS, JavaScript</p><br>
+                <div class="yuru-chara-map-description">
+                    <h1 aria-labelledby="Music Player Concept">Music Player Concept</h1>
+                     
+                    <h3>Student Project | Fall 2020</h3>
+                    <br>
+                    <p>Tools Used: HTML, CSS, JavaScript</p>
+                    <br>
+                        <h2>The Task</h2>
+                        <p>Build a mobile music player application with core web technologies to understand website
+                            structure and implement a web application following web content accessibility guidelines.</p>
+                        <br>
+                        <h1>Introducing Music Player</h1>
+                        <div class="video">
+                            <iframe src="https://www.youtube.com/embed/LFrYVxHhqsA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" alt="Music Player Demo" allowfullscreen></iframe>
+                        </div>
+                        <div class="slideshow-container">
+                            
 
-                    Task: Build a mobile music player application with core web technologies to understand website
-                    structure and implement a web application following web content accessibility guidelines. <br><br><br>
-
-                    The first stage consisted of implementing a two-screen music player interface showing an album and song select
-                    screen using HTML and CSS.<br><br>
-
-                    The four albums shown here are example albums that follow a consistent, complementary color theme.<br><br>
-
-                    The second stage was the implementation of the music player screens using HTML, CSS, and Javascript.<br><br>
-
-                    Each button triggers its corresponding action and is consistent with the music player's status, simulating playback.<br><br><br></p>
-
-                    <p id="subtitle"><u>Takeaways:</u></p><p> This project was one of my first experienes working with HTML, CSS, and JavaScript and I had fun learning and gaining a
-                    new skillset. I'd like to use this knowledge in a greater capacity in the future in order to improve, problem-solve, and create more intentionally.
-                    </p>
+                            <div class="mySlides fade">
+                              <div class="numbertext">1 / 3</div>
+                              <img id="mp-image" src="images/music_player1.jpg" alt="Music Player: Home Screen" style="width:100%;"> 
+                              
+                            </div>
+                            
+                            <div class="mySlides fade">
+                              <div class="numbertext">2 / 3</div>
+                              <img id="mp-image" src="images/music_player2.jpg" alt="Music Player: Album Screen (ex. Currents by Tame Impala)" style="width:100%;">
+                              
+                            </div>
+                            
+                            <div class="mySlides fade">
+                              <div class="numbertext">3 / 3</div>
+                              <img id="mp-image" src="images/music_player3.jpg" alt="Music Player: Song Player" style="width:100%;">
+                              
+                            </div>
+                            
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            
+                            </div>
+                            <br>
+                            
+                            <div style="text-align:center">
+                              <span class="dot" onclick="currentSlide(1)"></span> 
+                              <span class="dot" onclick="currentSlide(2)"></span> 
+                              <span class="dot" onclick="currentSlide(3)"></span> 
+                            </div>
+                        </div>
+                        <br>
+                        <h1>The Process</h1>
+                        <p>The first stage consisted of implementing a two-screen music player interface showing an album and song select
+                            screen using HTML and CSS.</p>
+                        <p>The four albums shown here are example albums that follow a consistent, complementary color theme.</p>
+                            <br>
+                        <p>The second stage was the implementation of the music player screens using HTML, CSS, and Javascript.</p>
+                        <p>Each button triggers its corresponding action and is consistent with the music player's status, simulating playback.</p>
+                        <br>
+                        
+                        <br>
+                        <h1>Reflection</h1>
+                        <p>This project was one of my first experienes working with HTML, CSS, and JavaScript and I had fun learning and gaining a
+                            new skillset. I'd like to use this knowledge in a greater capacity in the future in order to improve, problem-solve, and create more intentionally.</p>
+                        <br>
+                        
+                  </div>
                 </div>
+
+                
             </div>
         </div>
 
@@ -72,5 +119,37 @@
             <p>Send me a message </p> -->
 
         </footer>
+
+
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+        </script>
+            
     </body>
 </html>
